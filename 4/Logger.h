@@ -103,7 +103,7 @@ namespace Logger
 #else
             localtime_r(&curTime, &localTime);
 #endif
-            logfile << std::put_time(&localTime, settings::time_format.c_str()) << temperature << " C\n";
+            logfile << std::put_time(&localTime, settings::time_format.c_str()) << ' ' << temperature << " C\n";
         }
     }
 
