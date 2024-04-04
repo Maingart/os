@@ -182,14 +182,12 @@ namespace Logger
                 hourTemp.push_back(temperature);
 
                 if (curTime - settings::lastHoursUpdate > settings::HOUR) {
-                    //updateHour();
                     updateTime(TYPE_OF_TIME::HOUR);
                     settings::lastHoursUpdate = curTime;
                 }
 
                 if (curTime - settings::lastDayUpdate > settings::DAY) {
                     updateTime(TYPE_OF_TIME::DAY);
-                    //updateDay();
                     settings::lastDayUpdate = curTime;
                 }
 
